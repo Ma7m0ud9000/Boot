@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bot Testing Platform</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+        }
+        input, button {
+            padding: 10px;
+            margin: 10px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Bot Testing Platform</h1>
+    <p>Enter a website URL to test bots:</p>
+    <input type="text" id="urlInput" placeholder="Enter website URL">
+    <button onclick="startBot()">Start Bot Test</button>
+
+    <p id="status"></p>
+
+    <script>
+        function startBot() {
+            const url = document.getElementById('urlInput').value;
+            if (url) {
+                document.getElementById('status').innerText = 'Sending bots to ' + url;
+                // Here you can integrate bot logic to test the URL
+            } else {
+                document.getElementById('status').innerText = 'Please enter a valid URL.';
+            }
+        }
+    </script>
+</body>
+</html>
